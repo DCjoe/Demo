@@ -1,0 +1,4 @@
+com\fnl\demo\activemq\ActiveMqDemo.class
+com\fnl\demo\activemq\mq\PromoteActConsumer.class
+com\fnl\demo\activemq\config\ActiveMqConfig.class
+com\fnl\demo\activemq\mq\PromoteActProducer.class

@@ -1,0 +1,9 @@
+spring:
+  activemq:
+    broker-url: tcp://127.0.0.1:61616
+    in-memory: false
+    pool:
+      enable: true
+      max-connection: 5
+      idle-timeout: 30000
+      expiry-timeout: 0
