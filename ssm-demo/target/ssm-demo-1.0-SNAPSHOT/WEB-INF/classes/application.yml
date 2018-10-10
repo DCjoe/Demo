@@ -1,0 +1,43 @@
+#连接池配置
+spring:
+  datasource:
+    druid:
+      url: jdbc:oracle:thin:@172.28.1.41:1521:orcl
+      username: fnl_slwms
+      password: mcse2018
+      driver-class-name: oracle.jdbc.driver.OracleDriver
+      initial-size: 1
+      max-active: 20
+      min-idle: 1
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      validation-query: SELECT 1 FROM DUAL
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      filter: stat
+      min-evictable-idle-time-millis: 300000
+  #thymeleaf
+  thymeleaf:
+    cache: false
+    enabled: true
+    encoding: utf-8
+    mode: LEGACYHTML5
+#mybatis配置
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.fnl.ssmDemo.dao.domain
+#分页插件
+pagehelper:
+  helper-dialect: oracle
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+#日志
+logging:
+  config: classpath:logback.xml
+debug: true
+
+
